@@ -1,0 +1,48 @@
+<ion-content>
+
+    <ion-card>
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-item>
+                        <ion-label position="floating">Kartennummer</ion-label>
+                        <ion-input inputmode="numeric" [(ngModel)]="cNumber" required="true"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="6">
+                    <ion-item>
+                        <ion-label position="floating">Exp. Monat</ion-label>
+                        <ion-input [(ngModel)]="cMonth"  inputmode="numeric"></ion-input>
+                    </ion-item>
+                </ion-col>
+                <ion-col size="6">
+                    <ion-item>
+                        <ion-label position="floating">Exp. jahr</ion-label>
+                        <ion-input [(ngModel)]="cYear"  inputmode="numeric"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="12">
+                    <ion-item>
+                        <ion-label position="floating">CVV</ion-label>
+                        <ion-input [(ngModel)]="cvv"  inputmode="numeric"></ion-input>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+
+          <ion-row>
+            <ion-label color="danger">{{errorMessage}}</ion-label>
+          </ion-row>
+
+            <ion-row>
+                <ion-button expand="block" color="success" (click)="payWithStripe()">Bezahlen</ion-button>
+            </ion-row>
+
+        </ion-grid>
+    </ion-card>
+
+
+</ion-content>
